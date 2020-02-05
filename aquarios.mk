@@ -49,3 +49,7 @@ BOARD_PREBUILT_VENDORIMAGE := vendor/images/blueline/vendor.img
 
 $(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
+# Boot animation properties
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2160
