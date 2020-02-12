@@ -47,9 +47,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 BOARD_PREBUILT_VENDORIMAGE := vendor/images/blueline/vendor.img
 
-$(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+$(call inherit-product, vendor/google/blueline/blueline-vendor.mk)
+$(call inherit-product, vendor/pixelgapps/pixel-gapps.mk)
 
 # Boot animation properties
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 2160
+
+# Include a check for required repos - error out if not present
+$(call inherit-product, device/google/blueline/aqua_requirements.mk)
